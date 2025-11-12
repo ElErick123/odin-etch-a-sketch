@@ -10,6 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 20px;
   height: 100vh;
 }
 
@@ -49,4 +50,233 @@ body {
 
 .wrapper .header span {
   font-size: 32px;
+}
+
+/* GRID */
+.wrapper .grid {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 80%;
+  background-color: #efefef;
+  border: 3px solid black;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.grid-row {
+  display: flex;
+  flex: 1;
+}
+
+.grid-cell {
+  border: 1px solid #ccc;
+  flex: 1;
+  cursor: pointer;
+}
+
+.grid-cell:hover {
+  background-color: rgb(229, 229, 229);
+}
+
+.grid-cell-small {
+  border: 1px solid rgb(222, 222, 222);
+  flex: 1;
+  cursor: pointer;
+}
+
+/* LOWER BAR */
+.wrapper .lower-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.wrapper .lower-bar > span {
+  width: 85px;
+  height: 85px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(239, 239, 239);
+  box-shadow: 1px 1px 0 2px black;
+}
+
+
+/* SCROLLBAR SECTION */
+.wrapper .lower-bar .scrollbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 50%;
+}
+
+.wrapper .lower-bar .scrollbar-container span {
+  font-size: 24px;
+  color: rgb(255, 230, 0);
+  width: 130px;
+}
+
+
+/* SCROLLBAR */
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background-color: rgb(255, 230, 0);
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 20px;
+  width: 15px;
+  border-radius: 5px;
+  background-color: rgb(255, 230, 0);
+  cursor: pointer;
+  margin-top: -6px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background-color: rgb(255, 230, 0);
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background-color: rgb(255, 230, 0);
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background-color: rgb(255, 230, 0);
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background-color: rgb(255, 230, 0);
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+
+/* CLEAR BUTTON */
+#clear-btn {
+  background-color: rgb(255, 230, 0);
+  border: none;
+  border-radius: 10px;
+  padding: 5px 25px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* TOOLS */
+.tools {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  width: 120px;
+  height: 800px;
+  background-color: #ebebeb;
+  gap: 10px;
+  padding: 20px 5px;
+}
+
+.tools .tool {
+  flex: 1;
+  border: none;
+  border-radius: 15px;
+  width: 75%;
+  cursor: pointer;
+}
+
+#rainbow {
+  animation-name: rainbow;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    background-color: red;
+    border-color: red;
+  }
+  15% {
+    background-color: orange;
+    border-color: orange;
+  }
+  30% {
+    background-color: #ffe600;
+    border-color: #ffe600;
+  }
+  45% {
+    background-color: green;
+    border-color: green;
+  }
+  60% {
+    background-color: blue;
+    border-color: blue;
+  }
+  75% {
+    background-color: #ae34ff;
+    border-color: #ae34ff;
+  }
+  100% {
+    background-color: red;
+    border-color: red;
+  }
 }
